@@ -1,16 +1,23 @@
 [
     {
-        "title": "Smartphone Samsung Galaxy S24 Ultra 512GB",
+        "title": "Smartphone Samsung Galaxy S24 Ultra 5G 512GB",
         "price": 6499.00,
         "original_price": 7999.00,
         "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_634347-MLA46114829749_052021-O.webp",
         "permalink": "https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra-5g-512gb-12gb-ram-titanium-black/p/MLB23456789?matt_tool=vendas0nline"
     },
     {
-        "title": "Console PlayStation 5 Slim + 2 Jogos",
+        "title": "Console PlayStation 5 Slim 1TB + 2 Jogos",
         "price": 3799.00,
         "original_price": 4299.00,
         "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_783633-MLU74315806650_022024-O.webp",
         "permalink": "https://www.mercadolivre.com.br/console-playstation-5-ps5-slim-1tb-standard-edition/p/MLB28635412?matt_tool=vendas0nline"
+    },
+    {
+        "title": "Smart TV 65 Polegadas Samsung 4K UHD",
+        "price": 3299.00,
+        "original_price": 3999.00,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_612265-MLA54924233714_042023-O.webp",
+        "permalink": "https://www.mercadolivre.com.br/smart-tv-samsung-65-polegadas-4k-uhd/p/MLB12345678?matt_tool=vendas0nline"
     }
 ]
