@@ -2,47 +2,51 @@ import json
 import os
 from pathlib import Path
 
-def build_homepage():
+def build():
     ROOT = Path(__file__).resolve().parents[1]
     offers_file = ROOT / "data/products/offers.json"
     template_file = ROOT / "templates/homepage.html"
     output_file = ROOT / "index.html"
 
-    products = []
-    if offers_file.exists():
-        with open(offers_file, "r", encoding="utf-8") as f:
-            products = json.load(f)
+    if not offers_file.exists():
+        print("❌ Arquivo de ofertas não encontrado!")
+        return
 
-    products_html = ""
-    for p in products[:32]:
-        name = p.get("title") or p.get("name") or "Oferta Ninja"
+    with open(offers_file, "r", encoding="utf-8") as f:
+        products = json.load(f)
+
+    html_cards = ""
+    for p in products[:40]:
+        name = p.get("title", "Produto Ninja")
         price = p.get("price", 0)
-        # Garantir link de afiliado com o seu matt_tool
+        old_price = p.get("original_price") or price * 1.2
+        img = p.get("thumbnail") or p.get("image")
         link = p.get("permalink", "https://mercadolivre.com.br")
         if "matt_tool" not in link:
             link += "?matt_tool=vendas0nline"
-        
-        img = p.get("thumbnail") or p.get("image")
-        
-        products_html += f"""
+            
+        html_cards += f"""
         <div class="card">
-            <div class="card-image">
-                <img src="{img}" alt="{name}" loading="lazy">
+            <span class="badge">OFERTA</span>
+            <img src="{img}" alt="{name}">
+            <div class="card-info">
+                <div class="card-title">{name}</div>
+                <div>
+                    <span class="old-price">R$ {float(old_price):.2f}</span>
+                    <span class="price">R$ {float(price):.2f}</span>
+                </div>
+                <a href="{link}" class="btn" target="_blank">GARANTIR OFERTA</a>
             </div>
-            <div class="card-content">
-                <h3 class="card-title">{name}</h3>
-                <span class="price-current">R$ {float(price):.2f}</span>
-                <a href="{link}" class="btn-cta" target="_blank">VER OFERTA NINJA</a>
-            </div>
-        </div>"""
+        </div>
+        """
 
     with open(template_file, "r", encoding="utf-8") as f:
         template = f.read()
 
-    final_html = template.replace("{{products}}", products_html)
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write(final_html)
-    print("✅ Homepage com links de afiliado gerada!")
+        f.write(template.replace("{{products}}", html_cards))
+    
+    print("✅ Site restaurado com sucesso!")
 
 if __name__ == "__main__":
-    build_homepage()
+    build()

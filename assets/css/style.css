@@ -1,149 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 :root {
-    --primary: #6d28d9;
-    --primary-light: #8b5cf6;
-    --secondary: #1e293b;
-    --accent: #f43f5e;
-    --bg: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --ninja-purple: #6c5ce7;
+    --ninja-dark: #2d3436;
+    --ninja-accent: #ff7675;
+    --ninja-bg: #f9f9f9;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ninja-bg);
     margin: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    color: var(--ninja-dark);
 }
 
 .header {
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 28px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--ninja-purple);
     text-decoration: none;
 }
 
-.nav-links {
+.nav {
+    margin-top: 15px;
     display: flex;
-    gap: 1rem;
-    overflow-x: auto;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.nav-link {
+.nav a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: #636e72;
     font-weight: 600;
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
-.nav-link:hover {
-    background: var(--primary);
-    color: white;
+.nav a:hover {
+    background: var(--ninja-purple);
+    color: #fff;
 }
 
 .hero {
-    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--ninja-purple), #a29bfe);
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
-    background: #ede9fe;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--primary);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    background: white;
-    border-radius: 1rem;
+    background: #fff;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    position: relative;
 }
 
-.card-image {
+.card:hover { transform: translateY(-5px); }
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--ninja-accent);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card img {
+    width: 100%;
     height: 200px;
-    background: #f8fafc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.card-image img {
-    max-width: 100%;
-    max-height: 100%;
     object-fit: contain;
+    padding: 15px;
+    background: #fff;
 }
 
-.card-content {
-    padding: 1.25rem;
-}
+.card-info { padding: 20px; }
 
 .card-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    height: 2.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    height: 45px;
     overflow: hidden;
 }
 
-.price-current {
-    font-size: 1.25rem;
+.price {
+    font-size: 22px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--ninja-purple);
 }
 
-.btn-cta {
+.old-price {
+    font-size: 14px;
+    color: #b2bec3;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.btn {
     display: block;
-    width: 100%;
-    background: var(--primary);
-    color: white;
+    background: var(--ninja-purple);
+    color: #fff;
     text-align: center;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
+    padding: 12px;
     text-decoration: none;
     font-weight: 700;
-    margin-top: 1rem;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 .footer {
-    background: var(--secondary);
-    color: white;
-    padding: 3rem 0;
+    background: var(--ninja-dark);
+    color: #fff;
+    padding: 40px 20px;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 50px;
 }
