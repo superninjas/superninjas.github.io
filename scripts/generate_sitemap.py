@@ -5,7 +5,7 @@ from pathlib import Path
 
 def generate_sitemap():
     ROOT = Path(__file__).resolve().parents[1]
-    BASE_URL = "https://comprerapido.github.io"
+    BASE_URL = "https://superninjas.github.io"
     
     urls = [
         {"loc": f"{BASE_URL}/", "lastmod": datetime.now().strftime("%Y-%m-%d"), "priority": "1.0"},

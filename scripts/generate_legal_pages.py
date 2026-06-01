@@ -14,17 +14,17 @@ def generate_legal_pages():
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://superninja.github.io/">
+    <meta property="og:url" content="https://superninjas.github.io/">
     <meta property="og:title" content="{{title}} | Radar Ninja">
     <meta property="og:description" content="Confira {{title}} no Radar Ninja - Seu portal de inteligência em ofertas.">
-    <meta property="og:image" content="https://superninja.github.io/assets/img/og-image.png">
+    <meta property="og:image" content="https://superninjas.github.io/assets/img/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://superninja.github.io/">
+    <meta property="twitter:url" content="https://superninjas.github.io/">
     <meta property="twitter:title" content="{{title}} | Radar Ninja">
     <meta property="twitter:description" content="Confira {{title}} no Radar Ninja - Seu portal de inteligência em ofertas.">
-    <meta property="twitter:image" content="https://superninja.github.io/assets/img/og-image.png">
+    <meta property="twitter:image" content="https://superninjas.github.io/assets/img/og-image.png">
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">

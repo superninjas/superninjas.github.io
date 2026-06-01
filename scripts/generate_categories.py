@@ -63,7 +63,7 @@ def generate_categories():
         content = content.replace("{{category.products}}", products_html)
         content = content.replace("{{seo.title}}", f"Melhores Ofertas de {cat_name} | Radar Ninja")
         content = content.replace("{{meta.description}}", f"Confira as melhores ofertas de {cat_name} garimpadas pelo Radar Ninja.")
-        content = content.replace("{{canonical.url}}", f"https://comprerapido.github.io/categorias/{cat_slug}/")
+        content = content.replace("{{canonical.url}}", f"https://superninjas.github.io/categorias/{cat_slug}/")
 
         os.makedirs(f"categorias/{cat_slug}", exist_ok=True)
         with open(f"categorias/{cat_slug}/index.html", "w", encoding="utf-8") as f:

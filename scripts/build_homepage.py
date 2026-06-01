@@ -5,7 +5,7 @@ import unicodedata
 from urllib.parse import urlparse
 from logger import logger
 
-BASE_URL = "https://comprerapido.github.io/"
+BASE_URL = "https://superninjas.github.io/"
 DEFAULT_INPUT = "data/products/offers.json"
 DEFAULT_TEMPLATE = "templates/homepage.html"
 DEFAULT_OUTPUT = "index.html"
