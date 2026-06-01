@@ -2,50 +2,49 @@
   "robo_numero": 4,
   "nome_site": "Radar Ninja",
   "url_base": "https://superninjas.github.io",
-  "descricao": "As melhores ofertas em Celulares, Games, TV e Vídeo e Moda",
+  "descricao": "As melhores ofertas em Celulares, Games, TV, Informática e muito mais",
   "categorias": [
     {
       "id": "celular",
       "nome": "Celulares",
-      "descricao": "Smartphones, acessórios e dispositivos móveis",
-      "keywords": ["celular", "smartphone", "iphone", "samsung", "xiaomi", "motorola"],
-      "ml_filters": ["category:celulares-telefones"]
+      "ml_id": "MLB1051",
+      "keywords": ["smartphone", "iphone", "samsung", "xiaomi", "motorola"]
     },
     {
       "id": "games",
       "nome": "Games",
-      "descricao": "Consoles, jogos, acessórios e periféricos gamer",
-      "keywords": ["game", "console", "playstation", "xbox", "nintendo", "jogo", "gamer"],
-      "ml_filters": ["category:games"]
+      "ml_id": "MLB1144",
+      "keywords": ["playstation", "xbox", "nintendo", "console", "gamer"]
     },
     {
-      "id": "tv",
+      "id": "tv-e-video",
       "nome": "TV e Vídeo",
-      "descricao": "Televisores, projetores e acessórios audiovisuais",
-      "keywords": ["tv", "televisor", "4K", "smart TV", "OLED", "QLED"],
-      "ml_filters": ["category:televisores"]
+      "ml_id": "MLB1000",
+      "keywords": ["smart tv", "4k", "led", "monitor", "streaming"]
+    },
+    {
+      "id": "informatica",
+      "nome": "Informática",
+      "ml_id": "MLB1648",
+      "keywords": ["notebook", "laptop", "teclado", "mouse", "ssd"]
+    },
+    {
+      "id": "eletrodomesticos",
+      "nome": "Eletrodomésticos",
+      "ml_id": "MLB5726",
+      "keywords": ["geladeira", "fogão", "lavadora", "micro-ondas", "ar condicionado"]
+    },
+    {
+      "id": "beleza",
+      "nome": "Beleza",
+      "ml_id": "MLB1246",
+      "keywords": ["perfume", "maquiagem", "cabelo", "barbeador", "secador"]
     },
     {
       "id": "moda",
       "nome": "Moda",
-      "descricao": "Roupas, calçados, acessórios e tendências",
-      "keywords": ["roupa", "moda", "calcado", "tenis", "vestido", "camisa"],
-      "ml_filters": ["category:moda"]
+      "ml_id": "MLB1430",
+      "keywords": ["tênis", "camisa", "relógio", "mochila", "óculos"]
     }
-  ],
-  "configuracoes_tecnicas": {
-    "linguagem": "pt-BR",
-    "moeda": "BRL",
-    "timezone": "America/Sao_Paulo",
-    "atualizacao_horaria": true,
-    "frequencia_atualizacao_horas": 1,
-    "limite_produtos_por_categoria": 50,
-    "limite_posts_blog_por_dia": 5,
-    "sitemap_automatico": true
-  },
-  "configuracoes_afiliados": {
-    "programa": "Mercado Livre Afiliados",
-    "parametro": "matt_tool=vendas0nline",
-    "rastreamento": "utm_source=superninja&utm_medium=afiliado"
-  }
+  ]
 }

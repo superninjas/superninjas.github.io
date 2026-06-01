@@ -11,8 +11,11 @@ CONFIG_PATH = ROOT / 'data/ROBO4_CONFIG.json'
 CATEGORY_ALIASES = {
     'celular': {'celular', 'celulares', 'smartphones'},
     'games': {'games', 'game', 'video-games'},
-    'tv': {'tv', 'tv-e-video', 'televisores'},
+    'tv-e-video': {'tv', 'tv-e-video', 'televisores'},
     'moda': {'moda', 'roupas', 'vestuario'},
+    'informatica': {'informatica', 'notebook', 'notebooks', 'computadores'},
+    'eletrodomesticos': {'eletrodomesticos', 'geladeira', 'fogao', 'lavadora'},
+    'beleza': {'beleza', 'perfumes', 'cosmeticos', 'saude'},
 }
 
 def normalize_text(value):
@@ -26,15 +29,17 @@ def normalize_slug(value):
     return normalize_text(value).replace(' ', '-')
 
 def load_allowed_categories():
-    fallback = {'celular', 'celulares', 'smartphones', 'games', 'game', 'video-games', 'tv', 'tv-e-video', 'televisores', 'moda', 'roupas', 'vestuario'}
     if not CONFIG_PATH.exists():
-        return fallback
+        return set()
 
     config = json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
     allowed = set()
     for category in config.get('categorias', []):
-        allowed.update(CATEGORY_ALIASES.get(category.get('id'), {category.get('id')}))
-    return {normalize_slug(item) for item in allowed if item} or fallback
+        cat_id = category.get('id')
+        allowed.add(cat_id)
+        if cat_id in CATEGORY_ALIASES:
+            allowed.update(CATEGORY_ALIASES[cat_id])
+    return {normalize_slug(item) for item in allowed if item}
 
 def extract_ml_code(url):
     if not url:
@@ -88,6 +93,10 @@ def sanitize(products):
     return clean, removed_category, removed_duplicates
 
 def main():
+    if not OFFERS_PATH.exists():
+        print("⚠️ Arquivo de ofertas não encontrado.")
+        return
+        
     products = json.loads(OFFERS_PATH.read_text(encoding='utf-8'))
     clean, removed_category, removed_duplicates = sanitize(products)
     OFFERS_PATH.write_text(json.dumps(clean, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
