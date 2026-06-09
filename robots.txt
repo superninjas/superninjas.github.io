@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://superninjas.github.io/sitemap.xml
+
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
