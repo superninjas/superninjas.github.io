@@ -72,9 +72,18 @@ def sanitize(products):
 
     for product in products:
         slug = normalize_slug(product.get('custom_category_slug') or product.get('category') or '')
-        if slug not in allowed:
-            removed_category += 1
-            continue
+        # Se a categoria não estiver explicitamente permitida, tentamos encontrar uma correlação ou aceitamos se tiver slug
+        if allowed and slug not in allowed:
+            # Tenta encontrar se o slug está contido em algum alias
+            found = False
+            for main_cat, aliases in CATEGORY_ALIASES.items():
+                if slug in aliases or any(a in slug for a in aliases):
+                    product['custom_category_slug'] = main_cat
+                    found = True
+                    break
+            if not found:
+                removed_category += 1
+                continue
 
         key = product_key(product)
         name_key = ' '.join(normalize_text(product.get('name') or product.get('title')).split()[:8])
