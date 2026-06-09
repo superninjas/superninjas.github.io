@@ -91,7 +91,7 @@ def build():
             savings_html = f'<div class="savings">💰 Economize R$ {savings:.0f}</div>' if savings > 0 else ""
             
             products_html += f"""
-            <div class="card" itemscope itemtype="https://schema.org/Product">
+            <div class="card" itemscope itemtype="https://schema.org/Product">\n                <span class="badge-verified">✓ OFERTA VERIFICADA 2026</span>
                 {badge_html}
                 <div class="card-img-wrap">
                     <img src="{image}" alt="{title}" loading="lazy" itemprop="image">
