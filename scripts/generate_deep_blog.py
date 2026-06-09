@@ -14,7 +14,7 @@ def generate_blog():
     for p in products[:5]: # Criar 5 posts iniciais
         slug = p['title'].lower().replace(" ", "-")[:50]
         img = p.get("thumbnail") or p.get("image")
-        link = p.get("permalink") + "?matt_tool=vendas0nline"
+        link = p.get("permalink") + "?matt_tool=60566305"
         
         html = f"""
         <!DOCTYPE html>

@@ -79,7 +79,7 @@ def build():
 
             # Link de afiliado
             if "mercadolivre.com.br" in link and "matt_tool" not in link:
-                link = link + ("&" if "?" in link else "?") + "matt_tool=vendas0nline"
+                link = link + ("&" if "?" in link else "?") + "matt_tool=60566305"
 
             badge_html = f'<span class="badge">↓ {discount}% OFF</span>' if discount >= 5 else '<span class="badge badge-green">OFERTA</span>'
             old_price_html = f'<span class="old-price">De R$ {float(original):.2f}</span>' if original and float(original) > float(price) else ""

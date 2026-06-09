@@ -241,7 +241,7 @@ def generate_categories():
 
                 # Link de afiliado
                 if "mercadolivre.com.br" in p_link and "matt_tool" not in p_link:
-                    p_link = p_link + ("&" if "?" in p_link else "?") + "matt_tool=vendas0nline"
+                    p_link = p_link + ("&" if "?" in p_link else "?") + "matt_tool=60566305"
 
                 badge_html = f'<span class="badge">↓ {discount}% OFF</span>' if discount >= 5 else ""
                 old_price_html = f'<span class="old-price">De R$ {p_original:.2f}</span>' if p_original and p_original > p_price else ""

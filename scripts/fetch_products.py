@@ -29,7 +29,7 @@ def fetch():
                     # LINK DE AFILIADO
                     link = item.get("permalink")
                     if "matt_tool" not in link:
-                        link += "?matt_tool=vendas0nline"
+                        link += "?matt_tool=60566305"
                         
                     all_products.append({
                         "title": item.get("title"),
@@ -49,14 +49,14 @@ def fetch():
                 "price": 6499.00,
                 "original_price": 7999.00,
                 "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_634347-MLA46114829749_052021-O.webp",
-                "permalink": "https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra-5g-512gb-12gb-ram-titanium-black/p/MLB23456789?matt_tool=vendas0nline"
+                "permalink": "https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra-5g-512gb-12gb-ram-titanium-black/p/MLB23456789?matt_tool=60566305"
             },
             {
                 "title": "Console PlayStation 5 Slim 1TB",
                 "price": 3799.00,
                 "original_price": 4299.00,
                 "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_783633-MLU74315806650_022024-O.webp",
-                "permalink": "https://www.mercadolivre.com.br/console-playstation-5-ps5-slim-1tb-standard-edition/p/MLB28635412?matt_tool=vendas0nline"
+                "permalink": "https://www.mercadolivre.com.br/console-playstation-5-ps5-slim-1tb-standard-edition/p/MLB28635412?matt_tool=60566305"
             }
         ]
     

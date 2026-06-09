@@ -138,7 +138,7 @@ def generate_article_html(idea):
             <div class="cta-box">
                 <h3>🔥 Não perca as melhores ofertas!</h3>
                 <p>Clique aqui para ver as ofertas mais recentes de {category} no Mercado Livre!</p>
-                <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=vendas0nline" class="cta-button">Ver Ofertas Agora!</a>
+                <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=60566305" class="cta-button">Ver Ofertas Agora!</a>
             </div>
 
             <h2>Perguntas Frequentes (FAQ)</h2>

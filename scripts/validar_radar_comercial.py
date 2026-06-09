@@ -35,7 +35,7 @@ def ok_url(url):
 for p in products:
     link = p.get("permalink", "")
     img = p.get("thumbnail") or p.get("image") or ""
-    if "mercadolivre.com.br" in link and "matt_tool=vendas0nline" in link:
+    if "mercadolivre.com.br" in link and "matt_tool=60566305" in link:
         summary["links_afiliado_em_json"] += 1
     else:
         summary["erros"].append({"tipo": "link_afiliado_ausente", "produto": p.get("title"), "url": link})
@@ -55,7 +55,7 @@ soup = BeautifulSoup(html, "html.parser")
 summary["ctas_homepage"] = len([a for a in soup.find_all("a", href=True) if "Ver Oferta Ninja" in a.get_text(" ", strip=True)])
 summary["fotos_homepage"] = len(soup.select(".card-img-wrap img"))
 summary["precos_homepage"] = html.count('itemprop="price"')
-summary["links_afiliado_homepage"] = len([a for a in soup.find_all("a", href=True) if "mercadolivre.com.br" in a["href"] and "matt_tool=vendas0nline" in a["href"]])
+summary["links_afiliado_homepage"] = len([a for a in soup.find_all("a", href=True) if "mercadolivre.com.br" in a["href"] and "matt_tool=60566305" in a["href"]])
 
 (ROOT / "validacao_radar_comercial.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 print(json.dumps(summary, ensure_ascii=False, indent=2))

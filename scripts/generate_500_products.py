@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 Gerador de 500 produtos para o Radar Ninja
-Distribui produtos nas 7 categorias com link de afiliado ?matt_tool=vendas0nline
+Distribui produtos nas 7 categorias com link de afiliado ?matt_tool=60566305
 """
 import json
 import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-AFFILIATE = "matt_tool=vendas0nline"
+AFFILIATE = "matt_tool=60566305"
 
 # Imagens reais do Mercado Livre (pool de imagens verificadas por categoria)
 IMAGES = {

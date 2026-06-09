@@ -70,7 +70,7 @@ def fetch_category(category_config):
                 
                 link = item.get("permalink")
                 if "matt_tool" not in link:
-                    link += ("&" if "?" in link else "?") + "matt_tool=vendas0nline"
+                    link += ("&" if "?" in link else "?") + "matt_tool=60566305"
                 
                 discount = int(((original_price - price) / original_price) * 100) if original_price > price else 0
                 
