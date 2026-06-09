@@ -47,13 +47,23 @@
     /* Centralizar Botão Mobile */
     .buy-button, .btn {
         width: 100% !important;
-        max-width: 140px !important;
-        margin: auto auto 0 auto !important;
-        padding: 8px 5px !important;
-        font-size: 12px !important;
+        max-width: 160px !important;
+        margin: 10px auto 0 auto !important;
+        padding: 12px 10px !important;
+        font-size: 14px !important;
         text-align: center !important;
-        border-radius: 20px !important;
+        border-radius: 8px !important;
         display: block !important;
+        background: linear-gradient(135deg, #ffdb00 0%, #ffc107 100%) !important;
+        color: #000 !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        box-shadow: 0 4px 15px rgba(255, 219, 0, 0.3) !important;
+        border: none !important;
+        transition: transform 0.2s ease !important;
+    }
+    .buy-button:active {
+        transform: scale(0.95) !important;
     }
 }
 
@@ -122,4 +132,30 @@
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+/* ---- MELHORIAS VISUAIS GLOBAIS ---- */
+.product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 1px solid #eee !important;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important;
+    border-color: #6c5ce7 !important;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #ffdb00 0%, #ffc107 100%);
+    color: #000;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(255, 219, 0, 0.2);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 6px 18px rgba(255, 219, 0, 0.4);
 }
