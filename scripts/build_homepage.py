@@ -65,7 +65,7 @@ def build():
         </div>
         """
     else:
-        for p in unique_products[:24]:
+        for p in unique_products[:200]:
             title = p.get("title") or p.get("name", "Produto")
             price = p.get("price", 0)
             original = p.get("original_price") or p.get("originalPrice", 0)

@@ -8,62 +8,59 @@ def fetch():
     output_file = ROOT / "data/products/offers.json"
     os.makedirs(output_file.parent, exist_ok=True)
     
-    # Busca real por produtos populares
-    queries = ["smartphone", "gamer", "smart tv", "notebook"]
+    queries = [
+        "smartphone", "iphone 15", "samsung s24", "playstation 5", "xbox", "nintendo switch",
+        "notebook gamer", "macbook air", "smart tv 4k", "geladeira duplex", "ar condicionado",
+        "fritadeira air fryer", "maquina de lavar", "fone bluetooth", "caixa de som jbl",
+        "monitor curvo", "teclado mecanico", "cadeira gamer", "aspirador robo", "perfume"
+    ]
+    
     all_products = []
+    seen_ids = set()
+    target_count = 170
     
     for q in queries:
-        url = f"https://api.mercadolibre.com/sites/MLB/search?q={q}&limit=5"
+        if len(all_products) >= target_count:
+            break
+            
+        url = f"https://api.mercadolibre.com/sites/MLB/search?q={q}&limit=20"
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=15)
             if response.status_code == 200:
                 data = response.json()
                 for item in data.get("results", []):
-                    # CORREÇÃO DA FOTO: Pegar a imagem de alta resolução (O.webp)
-                    img_id = item.get("thumbnail_id")
-                    if img_id:
-                        img_url = f"https://http2.mlstatic.com/D_NQ_NP_{img_id}-O.webp"
-                    else:
-                        img_url = item.get("thumbnail").replace("-I.jpg", "-O.jpg")
-                    
-                    # LINK DE AFILIADO
-                    link = item.get("permalink")
-                    if "matt_tool" not in link:
-                        link += "?matt_tool=60566305"
+                    if len(all_products) >= target_count:
+                        break
                         
+                    ml_id = item.get("id")
+                    if ml_id in seen_ids:
+                        continue
+                    seen_ids.add(ml_id)
+                    
+                    img_id = item.get("thumbnail_id")
+                    img_url = f"https://http2.mlstatic.com/D_NQ_NP_{img_id}-O.webp" if img_id else item.get("thumbnail").replace("-I.jpg", "-O.jpg")
+                    
+                    price = item.get("price")
+                    original = item.get("original_price") or item.get("base_price") or (price * 1.2)
+                    link = item.get("permalink")
+                    link = link + ("&" if "?" in link else "?") + "matt_tool=60566305"
+                    
                     all_products.append({
+                        "id": ml_id,
                         "title": item.get("title"),
-                        "price": item.get("price"),
-                        "original_price": item.get("base_price") or item.get("price") * 1.2,
+                        "price": price,
+                        "original_price": original,
                         "thumbnail": img_url,
-                        "permalink": link
+                        "permalink": link,
+                        "custom_discount_pct": int(((original - price) / original) * 100) if original > price else 0
                     })
         except:
             continue
             
-    # Se a API falhar, usar Fallback com fotos garantidas
-    if not all_products:
-        all_products = [
-            {
-                "title": "Smartphone Samsung Galaxy S24 Ultra",
-                "price": 6499.00,
-                "original_price": 7999.00,
-                "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_634347-MLA46114829749_052021-O.webp",
-                "permalink": "https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra-5g-512gb-12gb-ram-titanium-black/p/MLB23456789?matt_tool=60566305"
-            },
-            {
-                "title": "Console PlayStation 5 Slim 1TB",
-                "price": 3799.00,
-                "original_price": 4299.00,
-                "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_783633-MLU74315806650_022024-O.webp",
-                "permalink": "https://www.mercadolivre.com.br/console-playstation-5-ps5-slim-1tb-standard-edition/p/MLB28635412?matt_tool=60566305"
-            }
-        ]
-    
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(all_products, f, indent=4)
+        json.dump(all_products, f, indent=4, ensure_ascii=False)
     
-    print(f"✅ Robô atualizado: {len(all_products)} produtos com fotos e links!")
+    print(f"✅ Robô Ninja: {len(all_products)} produtos REAIS capturados!")
 
 if __name__ == "__main__":
     fetch()
