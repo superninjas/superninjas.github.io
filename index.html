@@ -1,253 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Radar Ninja | Inteligência de Compra, Ofertas e Economia
-  </title>
-  <meta content="O Radar Ninja ajuda você a economizar de verdade com guias de compra, comparativos de produtos e alertas de preços reais. Não caia em falsas promoções!" name="description"/>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body { font-family: 'Inter', sans-serif; }
-  </style>
- </head>
- <body class="bg-gray-50 text-gray-900">
-  <!-- Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-   <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a class="text-2xl font-extrabold text-red-600 flex items-center" href="/">
-     <span class="mr-2">
-      🥷
-     </span>
-     Radar Ninja
-    </a>
-    <div class="hidden md:flex space-x-8 font-semibold">
-     <a class="hover:text-red-600 transition" href="/ofertas/">
-      Ofertas
-     </a>
-     <a class="hover:text-red-600 transition" href="/comparativos/">
-      Comparativos
-     </a>
-     <a class="hover:text-red-600 transition" href="/guias/">
-      Guias Ninja
-     </a>
-     <a class="hover:text-red-600 transition" href="/rankings/">
-      Rankings
-     </a>
-     <a class="hover:text-red-600 transition" href="/dicas/">
-      Economia
-     </a>
-    </div>
-    <a class="text-gray-500 hover:text-red-600 font-medium" href="/sobre/">
-     Sobre
-    </a>
-   </nav>
-  </header>
-  <!-- Hero Section -->
-  <section class="bg-red-600 text-white py-16 md:py-24">
-   <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-     Compre com a Inteligência de um Ninja
-    </h1>
-    <p class="text-xl md:text-2xl mb-10 text-red-100 max-w-3xl mx-auto">
-     Análises reais, comparativos técnicos e alertas de preço para você nunca mais cair em falsas promoções.
-    </p>
-    <div class="flex flex-wrap justify-center gap-4">
-     <a class="bg-white text-red-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg" href="/guias/como-identificar-uma-oferta-de-verdade-no-mercado-livre/">
-      Comece por aqui
-     </a>
-     <a class="bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-800 transition border border-red-500" href="/ofertas/">
-      Ver Ofertas do Dia
-     </a>
-    </div>
-   </div>
-  </section>
-  <!-- Featured Articles -->
-  <section class="py-16 container mx-auto px-4">
-   <div class="flex justify-between items-end mb-10">
-    <div>
-     <h2 class="text-3xl font-bold mb-2">
-      Destaques da Semana
-     </h2>
-     <p class="text-gray-600">
-      O que você precisa ler antes de sua próxima compra.
-     </p>
-    </div>
-   </div>
-   <div class="grid md:grid-cols-3 gap-8">
-    <!-- Article 1 -->
-    <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-     <div class="p-6">
-      <span class="text-red-600 text-sm font-bold uppercase tracking-wider">
-       Comparativos
-      </span>
-      <h3 class="text-xl font-bold mt-2 mb-4 leading-tight">
-       <a class="hover:text-red-600" href="/comparativos/ps5-vs-xbox-series-x-qual-console-escolher-em-2026/">
-        PS5 vs Xbox Series X: Qual console escolher em 2026?
-       </a>
-      </h3>
-      <p class="text-gray-600 text-sm mb-6">
-       Analisamos gráficos, exclusivos e o custo-benefício dos serviços de assinatura para decidir o vencedor.
-      </p>
-      <a class="text-red-600 font-bold flex items-center hover:underline" href="/comparativos/ps5-vs-xbox-series-x-qual-console-escolher-em-2026/">
-       Ler análise
-       <span class="ml-2">
-        →
-       </span>
-      </a>
-     </div>
-    </article>
-    <!-- Article 2 -->
-    <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-     <div class="p-6">
-      <span class="text-red-600 text-sm font-bold uppercase tracking-wider">
-       Ofertas
-      </span>
-      <h3 class="text-xl font-bold mt-2 mb-4 leading-tight">
-       <a class="hover:text-red-600" href="/ofertas/galaxy-s24-por-r$-x-vale-a-pena/">
-        Galaxy S24 por preços competitivos vale a pena? Veja a análise de preço
-       </a>
-      </h3>
-      <p class="text-gray-600 text-sm mb-6">
-       Descubra se o preço atual do topo de linha da Samsung é uma oportunidade real ou se deve esperar.
-      </p>
-      <a class="text-red-600 font-bold flex items-center hover:underline" href="/ofertas/galaxy-s24-por-r$-x-vale-a-pena/">
-       Ver veredito
-       <span class="ml-2">
-        →
-       </span>
-      </a>
-     </div>
-    </article>
-    <!-- Article 3 -->
-    <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-     <div class="p-6">
-      <span class="text-red-600 text-sm font-bold uppercase tracking-wider">
-       Dicas de Economia
-      </span>
-      <h3 class="text-xl font-bold mt-2 mb-4 leading-tight">
-       <a class="hover:text-red-600" href="/dicas/como-evitar-falsas-promoções-na-black-friday/">
-        Como evitar falsas promoções na Black Friday
-       </a>
-      </h3>
-      <p class="text-gray-600 text-sm mb-6">
-       5 dicas essenciais para identificar o "metade do dobro" e economizar de verdade nas datas promocionais.
-      </p>
-      <a class="text-red-600 font-bold flex items-center hover:underline" href="/dicas/como-evitar-falsas-promoções-na-black-friday/">
-       Aprender agora
-       <span class="ml-2">
-        →
-       </span>
-      </a>
-     </div>
-    </article>
-   </div>
-  </section>
-  <!-- Categories Grid -->
-  <section class="bg-gray-100 py-16">
-   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">
-     Explore por Categoria
-    </h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-     <a class="bg-white p-8 rounded-2xl text-center hover:bg-red-50 transition border border-transparent hover:border-red-200 shadow-sm" href="/ofertas/">
-      <div class="text-4xl mb-4">
-       🏷️
-      </div>
-      <h3 class="font-bold">
-       Ofertas do Dia
-      </h3>
-     </a>
-     <a class="bg-white p-8 rounded-2xl text-center hover:bg-red-50 transition border border-transparent hover:border-red-200 shadow-sm" href="/comparativos/">
-      <div class="text-4xl mb-4">
-       ⚖️
-      </div>
-      <h3 class="font-bold">
-       Comparativos
-      </h3>
-     </a>
-     <a class="bg-white p-8 rounded-2xl text-center hover:bg-red-50 transition border border-transparent hover:border-red-200 shadow-sm" href="/guias/">
-      <div class="text-4xl mb-4">
-       📜
-      </div>
-      <h3 class="font-bold">
-       Guias Ninja
-      </h3>
-     </a>
-     <a class="bg-white p-8 rounded-2xl text-center hover:bg-red-50 transition border border-transparent hover:border-red-200 shadow-sm" href="/rankings/">
-      <div class="text-4xl mb-4">
-       🏆
-      </div>
-      <h3 class="font-bold">
-       Rankings
-      </h3>
-     </a>
-    </div>
-   </div>
-  </section>
-  <!-- Newsletter/E-E-A-T Section -->
-  <section class="py-20 container mx-auto px-4 max-w-4xl text-center">
-   <h2 class="text-3xl font-bold mb-6">
-    Por que confiar no Radar Ninja?
-   </h2>
-   <p class="text-lg text-gray-600 mb-10">
-    Não somos apenas mais um site de ofertas. Nossa equipe analisa dados técnicos e históricos de preços reais para garantir que você faça a melhor escolha. Transparência e independência editorial são nossos pilares.
-   </p>
-   <div class="flex flex-col md:flex-row justify-center gap-8 text-left bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
-    <div>
-     <h4 class="font-bold text-red-600 mb-2">
-      ✓ Sem Preços Inventados
-     </h4>
-     <p class="text-sm text-gray-500">
-      Trabalhamos apenas com informações verificadas de grandes varejistas.
-     </p>
-    </div>
-    <div>
-     <h4 class="font-bold text-red-600 mb-2">
-      ✓ Análises Especializadas
-     </h4>
-     <p class="text-sm text-gray-500">
-      Nossos guias são escritos por quem entende de tecnologia e mercado.
-     </p>
-    </div>
-    <div>
-     <h4 class="font-bold text-red-600 mb-2">
-      ✓ Foco na Sua Economia
-     </h4>
-     <p class="text-sm text-gray-500">
-      Nosso objetivo é que você pague o menor preço possível, sempre.
-     </p>
-    </div>
-   </div>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-   <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-10">
-     <div class="text-2xl font-bold text-red-500 mb-4 md:mb-0">
-      Radar Ninja
-     </div>
-     <div class="flex space-x-6 text-sm text-gray-400">
-      <a class="hover:text-white" href="/sobre/">
-       Sobre Nós
-      </a>
-      <a class="hover:text-white" href="/sobre/#transparencia">
-       Transparência
-      </a>
-      <a class="hover:text-white" href="/sobre/#afiliados">
-       Política de Afiliados
-      </a>
-     </div>
-    </div>
-    <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-xs">
-     <p>
-      © 2026 Radar Ninja. Todas as análises são independentes. Podemos receber comissões por compras através de nossos links.
-     </p>
-    </div>
-   </div>
-  </footer>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Ninja | Inteligência de Compra, Ofertas e Economia</title>
+    <meta name="description" content="O Radar Ninja ajuda você a economizar de verdade com guias de compra, comparativos de produtos e alertas de preços reais. Não caia em falsas promoções!">
+    <meta name="keywords" content="ofertas, comparativos, guias de compra, economia, Mercado Livre, melhores preços">
+    <meta property="og:title" content="Radar Ninja | Inteligência de Compra">
+    <meta property="og:description" content="Análises reais, comparativos técnicos e alertas de preço para você nunca mais cair em falsas promoções.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://superninjas.github.io/">
+    <link rel="canonical" href="https://superninjas.github.io/">
+    <link rel="stylesheet" href="/assets/css/modern-portal.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">🥷 Radar Ninja</a>
+            <nav>
+                <a href="/ofertas/">Ofertas</a>
+                <a href="/comparativos/">Comparativos</a>
+                <a href="/guias/">Guias</a>
+                <a href="/rankings/">Rankings</a>
+                <a href="/dicas/">Economia</a>
+                <a href="/sobre/">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Compre com a Inteligência de um Ninja</h1>
+            <p>Análises reais, comparativos técnicos e alertas de preço para você nunca mais cair em falsas promoções.</p>
+            <div class="cta-buttons">
+                <a href="/guias/como-identificar-uma-oferta-de-verdade-no-mercado-livre/" class="btn btn-primary">Comece por aqui</a>
+                <a href="/ofertas/" class="btn btn-secondary">Ver Ofertas do Dia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CONTENT -->
+    <main>
+        <section>
+            <h2 class="section-title">📰 Destaques da Semana</h2>
+            <p class="section-subtitle">O que você precisa ler antes de sua próxima compra</p>
+            
+            <div class="grid grid-3">
+                <article class="card">
+                    <div class="card-image">⚖️</div>
+                    <div class="card-body">
+                        <span class="card-tag">Comparativos</span>
+                        <h3 class="card-title">
+                            <a href="/comparativos/ps5-vs-xbox-series-x-qual-console-escolher-em-2026/">PS5 vs Xbox Series X: Qual console escolher?</a>
+                        </h3>
+                        <p class="card-excerpt">Analisamos gráficos, exclusivos e o custo-benefício dos serviços de assinatura para decidir o vencedor.</p>
+                        <a href="/comparativos/ps5-vs-xbox-series-x-qual-console-escolher-em-2026/" class="card-link">Ler análise →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">🏷️</div>
+                    <div class="card-body">
+                        <span class="card-tag">Ofertas</span>
+                        <h3 class="card-title">
+                            <a href="/ofertas/galaxy-s24-ultra-vale-a-pena-investir-no-top-de-linha-da-samsung/">Galaxy S24 Ultra: Vale a pena investir?</a>
+                        </h3>
+                        <p class="card-excerpt">Descubra se o preço atual do topo de linha da Samsung é uma oportunidade real ou se deve esperar.</p>
+                        <a href="/ofertas/galaxy-s24-ultra-vale-a-pena-investir-no-top-de-linha-da-samsung/" class="card-link">Ver veredito →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">💡</div>
+                    <div class="card-body">
+                        <span class="card-tag">Dicas de Economia</span>
+                        <h3 class="card-title">
+                            <a href="/dicas/como-evitar-falsas-promoções-na-black-friday/">Como evitar falsas promoções</a>
+                        </h3>
+                        <p class="card-excerpt">5 dicas essenciais para identificar o "metade do dobro" e economizar de verdade nas datas promocionais.</p>
+                        <a href="/dicas/como-evitar-falsas-promoções-na-black-friday/" class="card-link">Aprender agora →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="mt-4">
+            <h2 class="section-title">🎯 Explore por Categoria</h2>
+            <p class="section-subtitle">Encontre conteúdo especializado para cada tipo de produto</p>
+            
+            <div class="grid grid-4">
+                <a href="/ofertas/" class="category-card">
+                    <span class="category-icon">🏷️</span>
+                    <span class="category-name">Ofertas do Dia</span>
+                </a>
+                <a href="/comparativos/" class="category-card">
+                    <span class="category-icon">⚖️</span>
+                    <span class="category-name">Comparativos</span>
+                </a>
+                <a href="/guias/" class="category-card">
+                    <span class="category-icon">📖</span>
+                    <span class="category-name">Guias Ninja</span>
+                </a>
+                <a href="/rankings/" class="category-card">
+                    <span class="category-icon">🏆</span>
+                    <span class="category-name">Rankings</span>
+                </a>
+                <a href="/dicas/" class="category-card">
+                    <span class="category-icon">💡</span>
+                    <span class="category-name">Dicas de Economia</span>
+                </a>
+                <a href="/alertas/" class="category-card">
+                    <span class="category-icon">🔔</span>
+                    <span class="category-name">Alertas de Preço</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- E-E-A-T SECTION -->
+        <section class="mt-4">
+            <h2 class="section-title">✨ Por que confiar no Radar Ninja?</h2>
+            <p class="section-subtitle">Transparência, análise e independência editorial</p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">✓ Sem Preços Inventados</h3>
+                        <p class="card-excerpt">Trabalhamos apenas com informações verificadas de grandes varejistas. Nada de dados fictícios.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">✓ Análises Especializadas</h3>
+                        <p class="card-excerpt">Nossos guias são escritos por quem entende de tecnologia e mercado. Conteúdo de qualidade.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">✓ Foco na Sua Economia</h3>
+                        <p class="card-excerpt">Nosso objetivo é que você pague o menor preço possível, sempre. Sua economia é nossa missão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="color: var(--primary);">Radar Ninja</h4>
+                    <p>Monitoramos o mercado para encontrar os melhores preços para você. Inteligência de compra em primeiro lugar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="/ofertas/">Ofertas</a></li>
+                        <li><a href="/comparativos/">Comparativos</a></li>
+                        <li><a href="/guias/">Guias</a></li>
+                        <li><a href="/rankings/">Rankings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conteúdo</h4>
+                    <ul>
+                        <li><a href="/dicas/">Dicas de Economia</a></li>
+                        <li><a href="/alertas/">Alertas de Preço</a></li>
+                        <li><a href="/noticias/">Blog</a></li>
+                        <li><a href="/sobre/">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="/sobre/">Sobre Nós</a></li>
+                        <li><a href="/privacidade/">Privacidade</a></li>
+                        <li><a href="/termos/">Termos</a></li>
+                        <li><a href="/contato/">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Radar Ninja — Participamos do Programa de Afiliados do Mercado Livre. Análises independentes e transparentes.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
