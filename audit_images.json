@@ -1,0 +1,57 @@
+{
+  "total_products": 6,
+  "valid_images": 0,
+  "broken_images": 6,
+  "empty_urls": 0,
+  "invalid_urls": 0,
+  "issues": {
+    "empty_url": [],
+    "invalid_url": [],
+    "broken_link": [
+      {
+        "title": "Celular Samsung Galaxy A07 256GB",
+        "category": "celulares",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_celular.json"
+      },
+      {
+        "title": "iPhone 15 Pro Max 256GB",
+        "category": "celulares",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_celular.json"
+      },
+      {
+        "title": "Console PlayStation 5 Slim",
+        "category": "games",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_games.json"
+      },
+      {
+        "title": "Jogo God of War Ragnarök PS5",
+        "category": "games",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_games.json"
+      },
+      {
+        "title": "Tênis Esportivo Masculino Nike",
+        "category": "moda",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_moda.json"
+      },
+      {
+        "title": "Vestido Longo Feminino Floral",
+        "category": "moda",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_614131-MLB44622340767_012021-O.webp",
+        "status": 405,
+        "file": "products_moda.json"
+      }
+    ],
+    "no_image_field": [],
+    "valid": []
+  }
+}

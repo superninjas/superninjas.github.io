@@ -1,0 +1,14 @@
+{
+  "total_target": 200,
+  "total_collected": 180,
+  "by_category": {
+    "celular": 35,
+    "games": 30,
+    "tv-e-video": 25,
+    "informatica": 25,
+    "eletrodomesticos": 20,
+    "beleza": 20,
+    "moda": 25
+  },
+  "status": "PARCIAL"
+}
