@@ -1,10 +1,20 @@
+import os
 
+sections = {
+    "ofertas": "Ofertas do Dia",
+    "rankings": "Rankings de Produtos",
+    "dicas": "Dicas de Economia",
+    "alertas": "Alertas de Preço",
+    "guias": "Guias Ninja"
+}
+
+template = """
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guias Ninja | Radar Ninja</title>
+    <title>{title} | Radar Ninja</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,10 +32,10 @@
         </nav>
     </header>
     <main class="container mx-auto px-4 py-12">
-        <h1 class="text-4xl font-bold mb-8">Guias Ninja</h1>
+        <h1 class="text-4xl font-bold mb-8">{title}</h1>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="content-grid">
             <!-- Conteúdo será listado aqui -->
-            <p class="text-gray-600">Explore nossos artigos e análises sobre Guias Ninja para economizar de verdade.</p>
+            <p class="text-gray-600">Explore nossos artigos e análises sobre {title} para economizar de verdade.</p>
         </div>
     </main>
     <footer class="bg-gray-900 text-white py-12 mt-12">
@@ -35,3 +45,18 @@
     </footer>
 </body>
 </html>
+"""
+
+def create_indices():
+    for folder, title in sections.items():
+        path = f"/home/ubuntu/superninjas.github.io/{folder}"
+        os.makedirs(path, exist_ok=True)
+        file_path = os.path.join(path, "index.html")
+        
+        # Simple check: if index doesn't exist or is small, create/overwrite
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(template.format(title=title))
+        print(f"Created/Updated index for: {folder}")
+
+if __name__ == "__main__":
+    create_indices()
