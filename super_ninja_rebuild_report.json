@@ -1,0 +1,12 @@
+{
+  "old_product_cards_removed_or_replaced": 170,
+  "published_products_after_rebuild": 30,
+  "products_with_local_images": 30,
+  "products_removed_because_uncorrectable": 140,
+  "known_remaining_internal_404": 0,
+  "categories_created": 10,
+  "news_sections_created": 5,
+  "institutional_pages_created": 5,
+  "sitemap_urls": 22,
+  "note": "A API pública de busca do Mercado Livre retornou 403; foi usado catálogo editorial curado com imagens locais e destinos comerciais de busca exata para evitar imagens quebradas e 404 internos."
+}

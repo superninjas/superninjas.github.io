@@ -1,0 +1,12 @@
+{
+  "total_original": 0,
+  "total_valid": 0,
+  "total_rejected": 0,
+  "by_category": {
+    "placeholder": {
+      "valid": 0,
+      "rejected": 0,
+      "original": 0
+    }
+  }
+}

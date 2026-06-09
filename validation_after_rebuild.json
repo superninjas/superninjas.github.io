@@ -1,0 +1,22 @@
+{
+  "html_files": 116,
+  "product_cards": 54,
+  "unique_internal_links": 23,
+  "external_links": 81,
+  "missing_internal_links": [],
+  "missing_local_images": [],
+  "sitemap_urls": 22,
+  "checks": {
+    "title_meta_canonical_og": true,
+    "sitemap_present": true,
+    "robots_present": true,
+    "schema_present": true,
+    "institutional_pages": true,
+    "category_pages": true,
+    "news_sections": true,
+    "no_internal_404": true,
+    "all_product_cards_complete": true,
+    "sitemap_no_legacy_redirects": false
+  },
+  "seo_score_after": 90
+}

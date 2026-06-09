@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-06-09",
+  "total_issues": 0,
+  "issues": {
+    "low_content_pages": {
+      "count": 0,
+      "items": []
+    },
+    "duplicate_content": {
+      "count": 0,
+      "items": []
+    },
+    "products_without_description": {
+      "count": 0,
+      "items": []
+    },
+    "categories_without_text": {
+      "count": 0,
+      "items": []
+    },
+    "news_without_content": {
+      "count": 0,
+      "items": []
+    },
+    "broken_internal_links": {
+      "count": 0,
+      "items": []
+    },
+    "broken_images": {
+      "count": 0,
+      "items": []
+    },
+    "orphan_urls": {
+      "count": 0,
+      "items": []
+    },
+    "indexation_issues": {
+      "count": 0,
+      "items": []
+    },
+    "cwv_concerns": {
+      "count": 0,
+      "items": []
+    }
+  }
+}

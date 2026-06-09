@@ -1,0 +1,27 @@
+{
+  "site": "Super Ninja",
+  "updated": "2026-06-09",
+  "adsense": {
+    "status": "prepared",
+    "required_next_step": "Após criar ou aprovar a conta no Google AdSense, substituir o conteúdo de ads.txt pelo registro oficial fornecido pelo Google e inserir o script de anúncios com o publisher ID real.",
+    "placeholder_files": ["ads.txt"]
+  },
+  "mercado_livre_afiliados": {
+    "status": "prepared",
+    "tracking_parameter": "matt_tool=60566305",
+    "link_policy": "Links comerciais usam rel=\"nofollow sponsored noopener\" e apontam para destinos externos sem 404 verificado."
+  },
+  "amazon_afiliados": {
+    "status": "prepared_for_future",
+    "required_next_step": "Inserir tag Amazon Associates real quando o programa estiver aprovado."
+  },
+  "future_affiliates": {
+    "status": "prepared",
+    "policy": "Adicionar parâmetros e domínios somente após validação de destino, preço, imagem, título, transparência e conformidade editorial."
+  },
+  "editorial_transparency": {
+    "affiliate_disclosure": true,
+    "sponsored_link_rel": true,
+    "institutional_pages": ["/sobre/", "/contato/", "/privacidade/", "/termos/", "/cookies/"]
+  }
+}
