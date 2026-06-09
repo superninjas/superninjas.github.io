@@ -1,227 +1,209 @@
 /* ============================================================
-   CARDS PREMIUM - FASE 2 REDESIGN
+   CARDS PREMIUM v2.1 - UX & CONVERSÃO
    ============================================================ */
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .card {
     background: var(--ninja-white);
-    border-radius: var(--radius-lg);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
     position: relative;
-    border: 1px solid var(--ninja-gray-light);
+    border: 1px solid #eee;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.15);
     border-color: var(--ninja-purple-light);
 }
 
 /* Badge de Desconto */
 .badge {
     position: absolute;
-    top: 16px;
-    left: 16px;
-    background: linear-gradient(135deg, var(--ninja-accent) 0%, #e84393 100%);
-    color: var(--ninja-white);
-    padding: 6px 14px;
-    border-radius: var(--radius-sm);
-    font-size: 12px;
+    top: 12px;
+    left: 12px;
+    background: #ff4757;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 13px;
     font-weight: 800;
-    letter-spacing: 0.5px;
     z-index: 2;
-    box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
 }
 
 .badge-green {
-    background: linear-gradient(135deg, var(--ninja-green) 0%, #00a878 100%);
-    box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+    background: #2ed573;
+    box-shadow: 0 4px 10px rgba(46, 213, 115, 0.3);
 }
 
 /* Container da Imagem */
 .card-img-wrap {
     position: relative;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    overflow: hidden;
-    height: 240px;
+    background: #fff;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
 }
 
-.card img,
 .card-img-wrap img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    padding: 20px;
-    background: var(--ninja-white);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.5s ease;
 }
 
-.card:hover img {
-    transform: scale(1.08);
+.card:hover .card-img-wrap img {
+    transform: scale(1.05);
 }
 
 /* Info do Produto */
 .card-info {
-    padding: 24px;
+    padding: 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
 }
 
 .category-tag {
-    display: inline-block;
-    background: rgba(108, 92, 231, 0.12);
-    color: var(--ninja-purple);
-    padding: 4px 10px;
-    border-radius: 6px;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    color: var(--ninja-purple);
     text-transform: uppercase;
-    width: fit-content;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
 }
 
 .card-title {
     font-size: 15px;
     font-weight: 600;
-    line-height: 1.5;
-    color: var(--ninja-dark);
+    line-height: 1.4;
+    color: #2d3436;
+    margin-bottom: 12px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    flex: 1;
-}
-
-/* Economia Estimada */
-.savings {
-    background: rgba(0, 184, 148, 0.08);
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--ninja-green);
-    border-left: 3px solid var(--ninja-green);
+    height: 42px;
 }
 
 /* Preços */
 .price-wrap {
-    margin: 8px 0;
+    margin-top: auto;
+    padding-top: 10px;
 }
 
 .old-price {
     font-size: 13px;
-    color: var(--ninja-gray);
+    color: #b2bec3;
     text-decoration: line-through;
     display: block;
-    margin-bottom: 4px;
 }
 
 .price {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--ninja-purple);
-    line-height: 1;
-    margin-bottom: 2px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #2d3436;
+    margin: 2px 0;
 }
 
-.price-installments {
+.savings {
     font-size: 12px;
-    color: var(--ninja-gray);
-    font-weight: 500;
+    font-weight: 700;
+    color: #2ed573;
+    margin-bottom: 10px;
 }
 
-/* Botão CTA */
+/* Botões */
+.product-actions-local {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 12px;
+}
+
 .btn {
-    display: block;
-    background: linear-gradient(135deg, var(--ninja-purple) 0%, var(--ninja-purple-dark) 100%);
-    color: var(--ninja-white);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
-    border-radius: var(--radius-sm);
-    margin-top: auto;
-    transition: var(--transition);
-    border: none;
+    text-align: center;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+    transition: all 0.2s ease;
 }
 
-.btn:hover {
+.btn-buy {
+    background: var(--ninja-purple);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+.btn-buy:hover {
+    background: var(--ninja-purple-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
 }
 
-.btn:active {
-    transform: translateY(0);
+.btn-outline-card {
+    background: #f8f9fa;
+    color: #636e72;
+    border: 1px solid #dfe6e9;
+}
+
+.btn-outline-card:hover {
+    background: #e9ecef;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 20px;
-        padding: 30px 16px;
-    }
-    
-    .card-img-wrap {
-        height: 200px;
-    }
-    
-    .card-info {
-        padding: 16px;
-    }
-    
-    .price {
-        font-size: 24px;
-    }
-}
-
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 16px;
-        padding: 20px 12px;
-    }
-    
-    .card-img-wrap {
-        height: 160px;
-    }
-    
-    .card-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
         padding: 12px;
-        gap: 8px;
     }
-    
+
+    .card-img-wrap {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .card-info {
+        padding: 10px;
+    }
+
     .card-title {
         font-size: 13px;
+        height: 36px;
     }
-    
+
     .price {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 12px;
     }
     
-    .btn {
-        padding: 12px 12px;
-        font-size: 12px;
+    .badge {
+        font-size: 11px;
+        padding: 2px 6px;
     }
 }
