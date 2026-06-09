@@ -8,59 +8,38 @@ def fetch():
     output_file = ROOT / "data/products/offers.json"
     os.makedirs(output_file.parent, exist_ok=True)
     
-    queries = [
-        "smartphone", "iphone 15", "samsung s24", "playstation 5", "xbox", "nintendo switch",
-        "notebook gamer", "macbook air", "smart tv 4k", "geladeira duplex", "ar condicionado",
-        "fritadeira air fryer", "maquina de lavar", "fone bluetooth", "caixa de som jbl",
-        "monitor curvo", "teclado mecanico", "cadeira gamer", "aspirador robo", "perfume"
-    ]
-    
+    # Buscas mais amplas e diretas
+    queries = ["celular", "iphone", "ps5", "tv", "notebook", "air fryer", "fone", "geladeira"]
     all_products = []
     seen_ids = set()
-    target_count = 170
     
     for q in queries:
-        if len(all_products) >= target_count:
-            break
-            
-        url = f"https://api.mercadolibre.com/sites/MLB/search?q={q}&limit=20"
+        url = f"https://api.mercadolibre.com/sites/MLB/search?q={q}&limit=50"
         try:
-            response = requests.get(url, timeout=15)
-            if response.status_code == 200:
-                data = response.json()
-                for item in data.get("results", []):
-                    if len(all_products) >= target_count:
-                        break
-                        
-                    ml_id = item.get("id")
-                    if ml_id in seen_ids:
-                        continue
-                    seen_ids.add(ml_id)
-                    
+            r = requests.get(url, timeout=20)
+            data = r.json()
+            for item in data.get("results", []):
+                if len(all_products) >= 170: break
+                mid = item.get("id")
+                if mid not in seen_ids:
+                    seen_ids.add(mid)
                     img_id = item.get("thumbnail_id")
-                    img_url = f"https://http2.mlstatic.com/D_NQ_NP_{img_id}-O.webp" if img_id else item.get("thumbnail").replace("-I.jpg", "-O.jpg")
-                    
+                    img = f"https://http2.mlstatic.com/D_NQ_NP_{img_id}-O.webp" if img_id else item.get("thumbnail")
                     price = item.get("price")
-                    original = item.get("original_price") or item.get("base_price") or (price * 1.2)
-                    link = item.get("permalink")
-                    link = link + ("&" if "?" in link else "?") + "matt_tool=60566305"
-                    
+                    old = item.get("original_price") or (price * 1.2)
                     all_products.append({
-                        "id": ml_id,
                         "title": item.get("title"),
                         "price": price,
-                        "original_price": original,
-                        "thumbnail": img_url,
-                        "permalink": link,
-                        "custom_discount_pct": int(((original - price) / original) * 100) if original > price else 0
+                        "original_price": old,
+                        "thumbnail": img,
+                        "permalink": item.get("permalink") + "?matt_tool=60566305",
+                        "custom_discount_pct": int((1 - price/old)*100) if old > price else 0
                     })
-        except:
-            continue
+        except: continue
             
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(all_products, f, indent=4, ensure_ascii=False)
-    
-    print(f"✅ Robô Ninja: {len(all_products)} produtos REAIS capturados!")
+        json.dump(all_products, f, indent=4)
+    print(f"✅ Sucesso: {len(all_products)} produtos.")
 
 if __name__ == "__main__":
     fetch()
