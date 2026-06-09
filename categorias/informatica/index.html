@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root { --max-width: 1200px; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    .card { display: flex; flex-direction: column; height: 100%; }
+    .card-info { flex: 1; display: flex; flex-direction: column; }
+    .product-actions-local { margin-top: auto; }
+    @media (max-width: 768px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }
+        .card-title { font-size: 13px; height: 36px; }
+    }
     .nav-cta { background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
     .trust-bar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
     .trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
@@ -25,7 +33,9 @@
 <div class="trust-bar"><div class="container"><div class="trust-inner"><div class="trust-item"><span class="trust-icon">✓</span> 100% Produtos Reais</div><div class="trust-item"><span class="trust-icon">✓</span> Links Verificados</div><div class="trust-item"><span class="trust-icon">✓</span> Preços Atualizados</div><div class="trust-item"><span class="trust-icon">✓</span> Curadoria Ninja</div></div></div></div><div class="container"><section style="padding:40px 0;"><div class="section-header"><h2 class="section-title">Informática</h2><p class="section-subtitle">Página 1 de 1</p></div><div class="product-grid">
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">21% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_715002-MLU71005532104_082023-O.webp" alt="Notebook Gamer Acer Nitro 5 i5 16GB 512GB RTX 3050" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_715002-MLU71005532104_082023-O.webp" alt="Notebook Gamer Acer Nitro 5 i5 16GB 512GB RTX 3050" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Notebook Gamer Acer Nitro 5 i5 16GB 512GB RTX 3050</h3>
@@ -42,7 +52,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">27% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_823001-MLU53005512046_012023-O.webp" alt="Monitor Gamer LG UltraGear 27 144Hz 1ms" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_823001-MLU53005512046_012023-O.webp" alt="Monitor Gamer LG UltraGear 27 144Hz 1ms" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Monitor Gamer LG UltraGear 27 144Hz 1ms</h3>
@@ -59,7 +71,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU69005512048_052023-O.webp" alt="Teclado Mecânico Logitech G Pro X TKL" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU69005512048_052023-O.webp" alt="Teclado Mecânico Logitech G Pro X TKL" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Teclado Mecânico Logitech G Pro X TKL</h3>
@@ -76,7 +90,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU70005512050_062023-O.webp" alt="Mouse Gamer Razer DeathAdder V3 Pro" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU70005512050_062023-O.webp" alt="Mouse Gamer Razer DeathAdder V3 Pro" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Mouse Gamer Razer DeathAdder V3 Pro</h3>
@@ -93,7 +109,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU77005532130_052024-O.webp" alt="Samsung Galaxy Tab S9 FE 128GB" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU77005532130_052024-O.webp" alt="Samsung Galaxy Tab S9 FE 128GB" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Samsung Galaxy Tab S9 FE 128GB</h3>
@@ -110,7 +128,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_612001-MLU78005512082_062024-O.webp" alt="iPad Air Apple M1 64GB Space Gray" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_612001-MLU78005512082_062024-O.webp" alt="iPad Air Apple M1 64GB Space Gray" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">iPad Air Apple M1 64GB Space Gray</h3>
@@ -127,7 +147,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">26% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU81005512088_092024-O.webp" alt="Roteador TP-Link Archer AX55 Wi-Fi 6" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU81005512088_092024-O.webp" alt="Roteador TP-Link Archer AX55 Wi-Fi 6" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Roteador TP-Link Archer AX55 Wi-Fi 6</h3>
@@ -144,7 +166,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_812001-MLU83005512092_112024-O.webp" alt="Monitor Gamer Samsung Odyssey G5 34 Curvo" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_812001-MLU83005512092_112024-O.webp" alt="Monitor Gamer Samsung Odyssey G5 34 Curvo" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Monitor Gamer Samsung Odyssey G5 34 Curvo</h3>
@@ -161,7 +185,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">21% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU72007532140_092023-O.webp" alt="Notebook Dell Inspiron 15 i7 16GB 512GB" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU72007532140_092023-O.webp" alt="Notebook Dell Inspiron 15 i7 16GB 512GB" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Notebook Dell Inspiron 15 i7 16GB 512GB</h3>
@@ -178,7 +204,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU81005512158_092024-O.webp" alt="Monitor Gamer AOC Hero 24 144Hz" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU81005512158_092024-O.webp" alt="Monitor Gamer AOC Hero 24 144Hz" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Monitor Gamer AOC Hero 24 144Hz</h3>
@@ -195,7 +223,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">30% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU82005512160_102024-O.webp" alt="Teclado Razer Ornata V3 X" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU82005512160_102024-O.webp" alt="Teclado Razer Ornata V3 X" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Teclado Razer Ornata V3 X</h3>
@@ -212,7 +242,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">33% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU83005512162_112024-O.webp" alt="Mouse Logitech G502 Hero 25K" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU83005512162_112024-O.webp" alt="Mouse Logitech G502 Hero 25K" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Mouse Logitech G502 Hero 25K</h3>
@@ -229,7 +261,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">29% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_824001-MLU99005532160_032026-O.webp" alt="Samsung Galaxy Tab S9 Ultra 256GB" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_824001-MLU99005532160_032026-O.webp" alt="Samsung Galaxy Tab S9 Ultra 256GB" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Samsung Galaxy Tab S9 Ultra 256GB</h3>
@@ -246,7 +280,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">27% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_632001-MLU10005512194_042026-O.webp" alt="MacBook Air Apple M2 8GB 256GB SSD" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_632001-MLU10005512194_042026-O.webp" alt="MacBook Air Apple M2 8GB 256GB SSD" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">MacBook Air Apple M2 8GB 256GB SSD</h3>
@@ -263,7 +299,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">27% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU103005512200_072026-O.webp" alt="Roteador Mesh TP-Link Deco M4 (2-Pack)" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU103005512200_072026-O.webp" alt="Roteador Mesh TP-Link Deco M4 (2-Pack)" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Roteador Mesh TP-Link Deco M4 (2-Pack)</h3>
@@ -280,7 +318,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">23% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU105005512204_092026-O.webp" alt="Monitor Dell 27 4K S2722QC" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU105005512204_092026-O.webp" alt="Monitor Dell 27 4K S2722QC" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Informática</span>
             <h3 class="card-title" itemprop="name">Monitor Dell 27 4K S2722QC</h3>

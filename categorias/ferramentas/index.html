@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root { --max-width: 1200px; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    .card { display: flex; flex-direction: column; height: 100%; }
+    .card-info { flex: 1; display: flex; flex-direction: column; }
+    .product-actions-local { margin-top: auto; }
+    @media (max-width: 768px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }
+        .card-title { font-size: 13px; height: 36px; }
+    }
     .nav-cta { background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
     .trust-bar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
     .trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
@@ -25,7 +33,9 @@
 <div class="trust-bar"><div class="container"><div class="trust-inner"><div class="trust-item"><span class="trust-icon">✓</span> 100% Produtos Reais</div><div class="trust-item"><span class="trust-icon">✓</span> Links Verificados</div><div class="trust-item"><span class="trust-icon">✓</span> Preços Atualizados</div><div class="trust-item"><span class="trust-icon">✓</span> Curadoria Ninja</div></div></div></div><div class="container"><section style="padding:40px 0;"><div class="section-header"><h2 class="section-title">Ferramentas</h2><p class="section-subtitle">Página 1 de 1</p></div><div class="product-grid">
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU49005512054_022022-O.webp" alt="Furadeira de Impacto Bosch GSB 13 RE" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU49005512054_022022-O.webp" alt="Furadeira de Impacto Bosch GSB 13 RE" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Furadeira de Impacto Bosch GSB 13 RE</h3>
@@ -42,7 +52,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_623001-MLU51005512056_082022-O.webp" alt="Jogo de Ferramentas Tramontina 110 Peças" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_623001-MLU51005512056_082022-O.webp" alt="Jogo de Ferramentas Tramontina 110 Peças" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Jogo de Ferramentas Tramontina 110 Peças</h3>
@@ -59,7 +71,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU76005512078_042024-O.webp" alt="Parafusadeira Dewalt 20V Max" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU76005512078_042024-O.webp" alt="Parafusadeira Dewalt 20V Max" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Parafusadeira Dewalt 20V Max</h3>
@@ -76,7 +90,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_632001-MLU95005512116_112025-O.webp" alt="Maleta de Ferramentas Stanley 150 Peças" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_632001-MLU95005512116_112025-O.webp" alt="Maleta de Ferramentas Stanley 150 Peças" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Maleta de Ferramentas Stanley 150 Peças</h3>
@@ -93,7 +109,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU96005512118_122025-O.webp" alt="Chave de Impacto Makita 18V LXT" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU96005512118_122025-O.webp" alt="Chave de Impacto Makita 18V LXT" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Chave de Impacto Makita 18V LXT</h3>
@@ -110,7 +128,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">23% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU85005512166_012025-O.webp" alt="Serra Circular Bosch GKS 150" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU85005512166_012025-O.webp" alt="Serra Circular Bosch GKS 150" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Serra Circular Bosch GKS 150</h3>
@@ -127,7 +147,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">30% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU86005512168_022025-O.webp" alt="Jogo de Soquetes Gedore 22 Peças" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU86005512168_022025-O.webp" alt="Jogo de Soquetes Gedore 22 Peças" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Jogo de Soquetes Gedore 22 Peças</h3>
@@ -144,7 +166,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU98005512192_022026-O.webp" alt="Parafusadeira de Impacto Bosch GDX 18V" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU98005512192_022026-O.webp" alt="Parafusadeira de Impacto Bosch GDX 18V" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Parafusadeira de Impacto Bosch GDX 18V</h3>
@@ -161,7 +185,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU117005512228_092027-O.webp" alt="Martelete Perfurador Bosch GBH 2-24 D" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU117005512228_092027-O.webp" alt="Martelete Perfurador Bosch GBH 2-24 D" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Martelete Perfurador Bosch GBH 2-24 D</h3>
@@ -178,7 +204,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">30% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU118005512230_102027-O.webp" alt="Esmerilhadeira Angular Makita GA4530" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU118005512230_102027-O.webp" alt="Esmerilhadeira Angular Makita GA4530" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1581244276877-455b3a820563?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Ferramentas</span>
             <h3 class="card-title" itemprop="name">Esmerilhadeira Angular Makita GA4530</h3>

@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root { --max-width: 1200px; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    .card { display: flex; flex-direction: column; height: 100%; }
+    .card-info { flex: 1; display: flex; flex-direction: column; }
+    .product-actions-local { margin-top: auto; }
+    @media (max-width: 768px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }
+        .card-title { font-size: 13px; height: 36px; }
+    }
     .nav-cta { background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
     .trust-bar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
     .trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
@@ -25,7 +33,9 @@
 <div class="trust-bar"><div class="container"><div class="trust-inner"><div class="trust-item"><span class="trust-icon">✓</span> 100% Produtos Reais</div><div class="trust-item"><span class="trust-icon">✓</span> Links Verificados</div><div class="trust-item"><span class="trust-icon">✓</span> Preços Atualizados</div><div class="trust-item"><span class="trust-icon">✓</span> Curadoria Ninja</div></div></div></div><div class="container"><section style="padding:40px 0;"><div class="section-header"><h2 class="section-title">Colecionáveis</h2><p class="section-subtitle">Página 1 de 1</p></div><div class="product-grid">
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">23% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU90005512106_062025-O.webp" alt="Lego Star Wars Millennium Falcon" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU90005512106_062025-O.webp" alt="Lego Star Wars Millennium Falcon" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Colecionáveis</span>
             <h3 class="card-title" itemprop="name">Lego Star Wars Millennium Falcon</h3>
@@ -42,7 +52,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">27% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU91005512108_072025-O.webp" alt="Boneco Funko Pop Iron Man Marvel" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU91005512108_072025-O.webp" alt="Boneco Funko Pop Iron Man Marvel" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Colecionáveis</span>
             <h3 class="card-title" itemprop="name">Boneco Funko Pop Iron Man Marvel</h3>
@@ -59,7 +71,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">30% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU112005512218_042027-O.webp" alt="Lego Icons Bonsai Tree 10281" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU112005512218_042027-O.webp" alt="Lego Icons Bonsai Tree 10281" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Colecionáveis</span>
             <h3 class="card-title" itemprop="name">Lego Icons Bonsai Tree 10281</h3>
@@ -76,7 +90,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU113005512220_052027-O.webp" alt="Funko Pop Grogu with Cookie Star Wars" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU113005512220_052027-O.webp" alt="Funko Pop Grogu with Cookie Star Wars" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Colecionáveis</span>
             <h3 class="card-title" itemprop="name">Funko Pop Grogu with Cookie Star Wars</h3>

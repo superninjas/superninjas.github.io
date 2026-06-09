@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root { --max-width: 1200px; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    .card { display: flex; flex-direction: column; height: 100%; }
+    .card-info { flex: 1; display: flex; flex-direction: column; }
+    .product-actions-local { margin-top: auto; }
+    @media (max-width: 768px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }
+        .card-title { font-size: 13px; height: 36px; }
+    }
     .nav-cta { background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
     .trust-bar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
     .trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
@@ -25,7 +33,9 @@
 <div class="trust-bar"><div class="container"><div class="trust-inner"><div class="trust-item"><span class="trust-icon">✓</span> 100% Produtos Reais</div><div class="trust-item"><span class="trust-icon">✓</span> Links Verificados</div><div class="trust-item"><span class="trust-icon">✓</span> Preços Atualizados</div><div class="trust-item"><span class="trust-icon">✓</span> Curadoria Ninja</div></div></div></div><div class="container"><section style="padding:40px 0;"><div class="section-header"><h2 class="section-title">TV e Vídeo</h2><p class="section-subtitle">Página 1 de 1</p></div><div class="product-grid">
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_824005-MLU70005512030_062023-O.webp" alt="Smart TV 50 4K Samsung Crystal UHD" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_824005-MLU70005512030_062023-O.webp" alt="Smart TV 50 4K Samsung Crystal UHD" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">TV e Vídeo</span>
             <h3 class="card-title" itemprop="name">Smart TV 50 4K Samsung Crystal UHD</h3>
@@ -42,7 +52,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU79005512084_072024-O.webp" alt="Smart TV 65 4K LG QNED80" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU79005512084_072024-O.webp" alt="Smart TV 65 4K LG QNED80" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">TV e Vídeo</span>
             <h3 class="card-title" itemprop="name">Smart TV 65 4K LG QNED80</h3>
@@ -59,7 +71,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU71005532135_092023-O.webp" alt="Smart TV 55 4K TCL QLED Google TV" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU71005532135_092023-O.webp" alt="Smart TV 55 4K TCL QLED Google TV" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">TV e Vídeo</span>
             <h3 class="card-title" itemprop="name">Smart TV 55 4K TCL QLED Google TV</h3>
@@ -76,7 +90,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU101005512196_052026-O.webp" alt="Smart TV 75 4K Samsung Neo QLED" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU101005512196_052026-O.webp" alt="Smart TV 75 4K Samsung Neo QLED" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">TV e Vídeo</span>
             <h3 class="card-title" itemprop="name">Smart TV 75 4K Samsung Neo QLED</h3>

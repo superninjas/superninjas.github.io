@@ -49,10 +49,13 @@ def product_card(p):
     old_price = f'<span class="old-price">De {brl(original)}</span>'
     savings = f'<div class="savings">Você economiza {brl(float(original) - float(price))}</div>'
     
+    fallback = p.get("thumbnail_fallback", "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80")
     return f'''
     <article class="card" itemscope itemtype="https://schema.org/Product">
         {badge}
-        <div class="card-img-wrap"><img src="{img}" alt="{title}" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="{img}" alt="{title}" loading="lazy" itemprop="image" onerror="this.src='{fallback}'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">{cat}</span>
             <h3 class="card-title" itemprop="name">{title}</h3>
@@ -79,8 +82,16 @@ def head(title, desc, canonical="/"):
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root {{ --max-width: 1200px; }}
-    .container {{ max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }}
-    .header-inner {{ max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }}
+    .container {{ max-width: 1200px; margin: 0 auto; padding: 0 20px; }}
+    .header-inner {{ max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }}
+    .product-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }}
+    .card {{ display: flex; flex-direction: column; height: 100%; }}
+    .card-info {{ flex: 1; display: flex; flex-direction: column; }}
+    .product-actions-local {{ margin-top: auto; }}
+    @media (max-width: 768px) {{
+        .product-grid {{ grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }}
+        .card-title {{ font-size: 13px; height: 36px; }}
+    }}
     .nav-cta {{ background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }}
     .trust-bar {{ background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }}
     .trust-inner {{ display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }}

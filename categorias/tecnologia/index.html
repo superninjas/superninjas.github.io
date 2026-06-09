@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
     :root { --max-width: 1200px; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    .card { display: flex; flex-direction: column; height: 100%; }
+    .card-info { flex: 1; display: flex; flex-direction: column; }
+    .product-actions-local { margin-top: auto; }
+    @media (max-width: 768px) {
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 10px; }
+        .card-title { font-size: 13px; height: 36px; }
+    }
     .nav-cta { background: var(--ninja-purple); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
     .trust-bar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
     .trust-inner { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
@@ -25,7 +33,9 @@
 <div class="trust-bar"><div class="container"><div class="trust-inner"><div class="trust-item"><span class="trust-icon">✓</span> 100% Produtos Reais</div><div class="trust-item"><span class="trust-icon">✓</span> Links Verificados</div><div class="trust-item"><span class="trust-icon">✓</span> Preços Atualizados</div><div class="trust-item"><span class="trust-icon">✓</span> Curadoria Ninja</div></div></div></div><div class="container"><section style="padding:40px 0;"><div class="section-header"><h2 class="section-title">Tecnologia</h2><p class="section-subtitle">Página 1 de 1</p></div><div class="product-grid">
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU54005512040_022023-O.webp" alt="Fone de Ouvido Sony WH-1000XM5 Noise Cancelling" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU54005512040_022023-O.webp" alt="Fone de Ouvido Sony WH-1000XM5 Noise Cancelling" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Fone de Ouvido Sony WH-1000XM5 Noise Cancelling</h3>
@@ -42,7 +52,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU71005532110_092023-O.webp" alt="Apple Watch Series 9 GPS 45mm Meia-noite" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_756001-MLU71005532110_092023-O.webp" alt="Apple Watch Series 9 GPS 45mm Meia-noite" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Apple Watch Series 9 GPS 45mm Meia-noite</h3>
@@ -59,7 +71,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU69005512066_052023-O.webp" alt="Smartwatch Amazfit GTR 4 Vintage Brown" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_923001-MLU69005512066_052023-O.webp" alt="Smartwatch Amazfit GTR 4 Vintage Brown" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Smartwatch Amazfit GTR 4 Vintage Brown</h3>
@@ -76,7 +90,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU70005512068_062023-O.webp" alt="Echo Dot 5ª Geração com Relógio" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_845001-MLU70005512068_062023-O.webp" alt="Echo Dot 5ª Geração com Relógio" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Echo Dot 5ª Geração com Relógio</h3>
@@ -93,7 +109,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">23% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU71005532115_092023-O.webp" alt="Caixa de Som JBL Flip 6 Bluetooth" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_734001-MLU71005532115_092023-O.webp" alt="Caixa de Som JBL Flip 6 Bluetooth" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Caixa de Som JBL Flip 6 Bluetooth</h3>
@@ -110,7 +128,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">24% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU72007532120_092023-O.webp" alt="Câmera GoPro HERO12 Black" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_912001-MLU72007532120_092023-O.webp" alt="Câmera GoPro HERO12 Black" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Câmera GoPro HERO12 Black</h3>
@@ -127,7 +147,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">27% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU82005512090_102024-O.webp" alt="Headset HyperX Cloud II Wireless" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU82005512090_102024-O.webp" alt="Headset HyperX Cloud II Wireless" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Headset HyperX Cloud II Wireless</h3>
@@ -144,7 +166,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">26% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU86005512098_022025-O.webp" alt="Fone Bluetooth Beats Studio Pro" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU86005512098_022025-O.webp" alt="Fone Bluetooth Beats Studio Pro" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Fone Bluetooth Beats Studio Pro</h3>
@@ -161,7 +185,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU77005532150_052024-O.webp" alt="Fone Bluetooth JBL Tune 520BT" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU77005532150_052024-O.webp" alt="Fone Bluetooth JBL Tune 520BT" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Fone Bluetooth JBL Tune 520BT</h3>
@@ -178,7 +204,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">31% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_812001-MLU78005512152_062024-O.webp" alt="Smartwatch Samsung Galaxy Watch 6 44mm" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_812001-MLU78005512152_062024-O.webp" alt="Smartwatch Samsung Galaxy Watch 6 44mm" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Smartwatch Samsung Galaxy Watch 6 44mm</h3>
@@ -195,7 +223,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">26% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU91005512178_072025-O.webp" alt="Smartwatch Huawei Watch GT 4 46mm" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU91005512178_072025-O.webp" alt="Smartwatch Huawei Watch GT 4 46mm" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Smartwatch Huawei Watch GT 4 46mm</h3>
@@ -212,7 +242,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU92005512180_082025-O.webp" alt="Echo Pop Amazon Smart Speaker" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_834001-MLU92005512180_082025-O.webp" alt="Echo Pop Amazon Smart Speaker" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Echo Pop Amazon Smart Speaker</h3>
@@ -229,7 +261,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">23% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU93005512182_092025-O.webp" alt="Caixa de Som JBL Boombox 3" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_712001-MLU93005512182_092025-O.webp" alt="Caixa de Som JBL Boombox 3" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Caixa de Som JBL Boombox 3</h3>
@@ -246,7 +280,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">21% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU94005512184_102025-O.webp" alt="Câmera Insta360 X3" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_634001-MLU94005512184_102025-O.webp" alt="Câmera Insta360 X3" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Câmera Insta360 X3</h3>
@@ -263,7 +299,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">28% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_612001-MLU104005512202_082026-O.webp" alt="Headset Razer BlackShark V2 Pro" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_612001-MLU104005512202_082026-O.webp" alt="Headset Razer BlackShark V2 Pro" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Headset Razer BlackShark V2 Pro</h3>
@@ -280,7 +318,9 @@
     </article>
     <article class="card" itemscope itemtype="https://schema.org/Product">
         <span class="badge">25% OFF</span>
-        <div class="card-img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU108005512210_122026-O.webp" alt="Fone Bluetooth Marshall Major IV" loading="lazy" itemprop="image"></div>
+        <div class="card-img-wrap">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_945001-MLU108005512210_122026-O.webp" alt="Fone Bluetooth Marshall Major IV" loading="lazy" itemprop="image" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80'; this.onerror=null;">
+        </div>
         <div class="card-info">
             <span class="category-tag">Tecnologia</span>
             <h3 class="card-title" itemprop="name">Fone Bluetooth Marshall Major IV</h3>
