@@ -86,6 +86,10 @@ def build():
             installments = int(float(price) / 12) if float(price) >= 120 else 0
             installments_html = f'<div class="price-installments">ou 12x de R$ {installments:.0f}</div>' if installments else ""
 
+            # Calcular economia
+            savings = int(float(original) - float(price)) if original and float(original) > float(price) else 0
+            savings_html = f'<div class="savings">💰 Economize R$ {savings:.0f}</div>' if savings > 0 else ""
+            
             products_html += f"""
             <div class="card" itemscope itemtype="https://schema.org/Product">
                 {badge_html}
@@ -94,6 +98,7 @@ def build():
                 </div>
                 <div class="card-info">
                     <h3 class="card-title" itemprop="name">{title[:80]}</h3>
+                    {savings_html}
                     <div class="price-wrap" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         {old_price_html}
                         <div class="price" itemprop="price" content="{float(price):.2f}">R$ {float(price):.2f}</div>

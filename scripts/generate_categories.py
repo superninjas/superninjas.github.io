@@ -248,6 +248,10 @@ def generate_categories():
                 installments = int(p_price / 12) if p_price >= 120 else 0
                 installments_html = f'<div class="price-installments">ou 12x de R$ {installments:.0f}</div>' if installments else ""
 
+                # Calcular economia
+                savings = int(p_original - p_price) if p_original and p_original > p_price else 0
+                savings_html = f'<div class="savings">💰 Economize R$ {savings:.0f}</div>' if savings > 0 else ""
+                
                 products_html += f"""
                 <div class="card" itemscope itemtype="https://schema.org/Product">
                     {badge_html}
@@ -257,6 +261,7 @@ def generate_categories():
                     <div class="card-info">
                         <span class="category-tag">{cat_name.upper()}</span>
                         <h3 class="card-title" itemprop="name">{p_name[:80]}</h3>
+                        {savings_html}
                         <div class="price-wrap" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             {old_price_html}
                             <div class="price" itemprop="price" content="{p_price:.2f}">R$ {p_price:.2f}</div>
@@ -265,7 +270,7 @@ def generate_categories():
                             {installments_html}
                         </div>
                         <a href="{p_link}" class="btn" target="_blank" rel="nofollow sponsored" itemprop="url">
-                            🛒 Ver Oferta no Mercado Livre
+                            🛒 Ver Oferta
                         </a>
                     </div>
                 </div>
